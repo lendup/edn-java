@@ -25,13 +25,13 @@ public class SimpleParserConfigTest {
             Parsers.newParserConfigBuilder().setSetFactory(
                     new CollectionBuilder.Factory() {
                 @Override
-				public CollectionBuilder builder() {
+                public CollectionBuilder builder() {
                     return new CollectionBuilder() {
                         SortedSet<Object> s = new TreeSet<Object>();
                         @Override
-						public void add(Object o) { s.add(o); }
+                        public void add(Object o) { s.add(o); }
                         @Override
-						public Object build() { return s; }
+                        public Object build() { return s; }
                     };
                 }
             }).build();

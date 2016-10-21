@@ -24,7 +24,7 @@ public class CustomTagHandler {
             .putTagHandler(Tag.newTag("us.bpsm", "uri"),
                 new TagHandler() {
                 @Override
-				public Object transform(Tag tag, Object value) {
+                public Object transform(Tag tag, Object value) {
                     return URI.create((String) value);
                 }
             }).build();

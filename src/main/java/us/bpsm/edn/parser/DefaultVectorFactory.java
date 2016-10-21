@@ -6,15 +6,15 @@ import java.util.Collections;
 
 final class DefaultVectorFactory implements CollectionBuilder.Factory {
     @Override
-	public CollectionBuilder builder() {
+    public CollectionBuilder builder() {
         return new CollectionBuilder() {
             ArrayList<Object> list = new ArrayList<Object>();
             @Override
-			public void add(Object o) {
+            public void add(Object o) {
                 list.add(o);
             }
             @Override
-			public Object build() {
+            public Object build() {
                 return Collections.unmodifiableList(list);
             }
         };

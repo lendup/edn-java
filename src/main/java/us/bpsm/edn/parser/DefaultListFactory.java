@@ -6,11 +6,11 @@ import java.util.*;
 
 final class DefaultListFactory implements CollectionBuilder.Factory {
     @Override
-	public CollectionBuilder builder() {
+    public CollectionBuilder builder() {
         return new CollectionBuilder() {
             ArrayList<Object> list = new ArrayList<Object>();
             @Override
-			public void add(Object o) {
+            public void add(Object o) {
                 list.add(o);
             }
             @Override

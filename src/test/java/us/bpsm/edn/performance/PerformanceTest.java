@@ -53,7 +53,7 @@ public class PerformanceTest {
         }
 
         @Override
-		public final void run() {
+        public final void run() {
             int max=getIterations();
             for (int i=0; i<max; i++) {
                 runIteration();
@@ -72,12 +72,12 @@ public class PerformanceTest {
 
     public static Benchmark testStringParsing = new Benchmark() {
         @Override
-		public String toString() {return "Parse edn from String";}
+        public String toString() {return "Parse edn from String";}
         @Override
-		public int getIterations() {return 100;}
+        public int getIterations() {return 100;}
 
         @Override
-		@SuppressWarnings("unused")
+        @SuppressWarnings("unused")
         public void runIteration() {
             Parseable r = Parsers.newParseable(ednString);
             Parser p=Parsers.newParser(Parsers.defaultConfiguration());
@@ -87,12 +87,12 @@ public class PerformanceTest {
 
     public static Benchmark testStringWriting = new Benchmark() {
         @Override
-		public String toString() {return "Print edn to String";}
+        public String toString() {return "Print edn to String";}
         @Override
-		public int getIterations() {return 100;}
+        public int getIterations() {return 100;}
 
         @Override
-		@SuppressWarnings("unused")
+        @SuppressWarnings("unused")
         public void runIteration() {
             String s=Printers.printString(ednData);
         }

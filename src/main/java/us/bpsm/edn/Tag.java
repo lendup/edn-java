@@ -25,13 +25,13 @@ public final class Tag implements Named, Comparable<Tag>, Serializable {
 
     /** {@inheritDoc} */
     @Override
-	public final String getPrefix() {
+    public final String getPrefix() {
         return sym.getPrefix();
     }
 
     /** {@inheritDoc} */
     @Override
-	public final String getName() {
+    public final String getName() {
         return sym.getName();
     }
 
@@ -85,7 +85,7 @@ public final class Tag implements Named, Comparable<Tag>, Serializable {
     }
 
     @Override
-	public String toString() {
+    public String toString() {
         return "#" + sym.toString();
     }
 
@@ -120,7 +120,7 @@ public final class Tag implements Named, Comparable<Tag>, Serializable {
     }
 
     @Override
-	public int compareTo(Tag o) {
+    public int compareTo(Tag o) {
         return sym.compareTo(o.sym);
     }
 

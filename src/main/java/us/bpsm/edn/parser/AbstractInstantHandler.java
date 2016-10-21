@@ -16,7 +16,7 @@ import us.bpsm.edn.Tag;
 public abstract class AbstractInstantHandler implements TagHandler {
 
     @Override
-	public final Object transform(Tag tag, Object value) {
+    public final Object transform(Tag tag, Object value) {
         if (!(value instanceof String)) {
             throw new EdnSyntaxException(tag.toString() + " expects a String.");
         }

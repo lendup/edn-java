@@ -15,7 +15,7 @@ import com.google.caliper.SimpleBenchmark;
 abstract class ABenchmark  extends SimpleBenchmark implements Runnable {
 
     @Override
-	public void run() {
+    public void run() {
         new Runner().run(new String[] { this.getClass().getCanonicalName(),
             "--timeUnit", "ms"});
     }
