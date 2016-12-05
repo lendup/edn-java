@@ -103,16 +103,20 @@
         </executions>
       </plugin>
     </plugins>
+    <extensions>
+      <extension>
+        <groupId>org.springframework.build</groupId>
+        <artifactId>aws-maven</artifactId>
+        <version>5.0.0.RELEASE</version>
+      </extension>
+    </extensions>
   </build>
   <distributionManagement>
     <repository>
-      <id>sonatype-nexus-staging</id>
-      <url>${release.repo.path}</url>
+      <id>aws-release</id>
+      <name>AWS Release Repository</name>
+      <url>s3://lendup.repos/maven/releases</url>
     </repository>
-    <snapshotRepository>
-      <id>sonatype-nexus-snapshots</id>
-      <url>${snapshot.repo.path}</url>
-    </snapshotRepository>
   </distributionManagement>
   <profiles>
     <profile>
